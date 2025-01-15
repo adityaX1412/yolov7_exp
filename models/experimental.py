@@ -247,7 +247,7 @@ class End2End(nn.Module):
 import subprocess
 import requests
 
-def attempt_download(weights):
+def attempt_load(weights):
     try:
         # Fetch the latest release information from GitHub API
         response = requests.get("https://api.github.com/repos/WongKinYiu/yolov7/releases/latest").json()
