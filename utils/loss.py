@@ -1695,3 +1695,13 @@ class ComputeLossAuxOTA:
             anch.append(anchors[a])  # anchors
 
         return indices, anch
+
+class ComputeLoss:
+    def __init__(self, model):
+        self.model = model
+
+    def __call__(self, pred, targets):
+        # Placeholder for actual loss computation
+        loss = torch.tensor(0.0, device=pred.device)
+        loss_items = [loss, loss, loss, loss]  # Placeholder for loss components
+        return loss, loss_items
